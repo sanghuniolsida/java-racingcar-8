@@ -40,7 +40,7 @@ public class GameController {
 
     private AttemptCount readAttemptCount() {
         String rawAttempt = inputView.readAttemptCount();
-        return AttemptCount.from(rawAttempt);
+        return AttemptCount.fromString(rawAttempt);
     }
 
     private List<Car> createCars(List<Name> names) {
