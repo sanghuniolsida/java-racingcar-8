@@ -16,11 +16,11 @@ public final class NameParser {
             throw new IllegalArgumentException("자동차 이름을 입력해 주세요.");
         }
         List<Name> parsedNames = new ArrayList<>(nameTokens.length);
-        for (String token : nameTokens) {
-            if (token.isEmpty()) {
+        for (String rawNameToken : nameTokens) {
+            if (rawNameToken.isEmpty()) {
                 throw new IllegalArgumentException("이름 사이에 빈 항목이 있습니다.");
             }
-            parsedNames.add(new Name(token));
+            parsedNames.add(new Name(rawNameToken));
         }
         return parsedNames;
     }
