@@ -12,15 +12,23 @@ public final class Name {
     }
 
     private String validate(String rawName) {
+        requireNonBlank(rawName);
+        requireMaxLength(rawName, MAX_NAME_LENGTH);
+        return rawName;
+    }
+
+    private void requireNonBlank(String rawName) {
         if (rawName == null || rawName.isBlank()) {
             throw new IllegalArgumentException("자동차 이름은 1~5자여야 합니다: 빈 값");
         }
-        if (rawName.length() > MAX_NAME_LENGTH) {
+    }
+
+    private void requireMaxLength(String rawName, int maxLength) {
+        if (rawName.length() > maxLength) {
             throw new IllegalArgumentException(
                     String.format("자동차 이름은 1~5자여야 합니다: '%s'", rawName)
             );
         }
-        return rawName;
     }
 
     public String value() { return value; }
