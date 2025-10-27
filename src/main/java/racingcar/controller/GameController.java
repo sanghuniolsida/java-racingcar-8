@@ -1,4 +1,3 @@
-// src/main/java/racingcar/controller/GameController.java
 package racingcar.controller;
 
 import java.util.ArrayList;
