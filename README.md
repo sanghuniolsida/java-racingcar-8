@@ -70,3 +70,26 @@
 - **단일 책임 원칙(SRP)** 준수 
 
 ---
+
+## 프로젝트 구조
+
+     src/
+     ├─ main/
+       └─ java/
+          └─ racingcar/
+             ├─ Application.java                          # 시작점
+             ├─ controller/
+             │  └─ GameController.java                    # 전체 흐름: 입력→라운드 진행→출력
+             ├─ domain/
+             │  ├─ Name.java                              # 자동차 이름 값 객체(1~5자, 공백 포함 길이 검증)
+             │  ├─ AttemptCount.java                      # 시도 횟수 값 객체(정수 ≥ 1)
+             │  ├─ Car.java                               # 전진/정지 반영(moveIf), 진행도 문자열(toProgressLine)
+             │  └─ Cars.java                              # 일괄 전진, 진행도 수집, 우승자 계산(winnersCsv 포함)
+             ├─ parser/
+             │  └─ NameParser.java                        # "이름1,이름2" CSV → List<Name> (빈 토큰 예외)
+             ├─ rule/
+             │  └─ RandomMoveRule.java                    # 난수 전진 규칙(0~9, 4 이상 true)
+             └─ view/
+                ├─ InputView.java                         # Console.readLine() 입력 프롬프트
+                └─ OutputView.java                        # 진행/우승자 콘솔 출력 전담
+
