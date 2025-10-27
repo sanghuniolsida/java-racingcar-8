@@ -12,6 +12,7 @@ public class Application {
             controller.startGame();
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
+            throw e;
         } finally {
             Console.close();
         }
