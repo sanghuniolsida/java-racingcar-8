@@ -34,7 +34,7 @@
 
 ---
 
-## 프로그래밍 요구 사항
+## ✅ 프로그래밍 요구 사항 1
 - [x] JDK 21 버전에서 실행 가능해야 한다.
 - [x] 프로그램 실행의 시작점은 Application의 main()이다.
 - [x] build.gradle 파일은 변경할 수 없으며, 제공된 라이브러리 이외의 외부 라이브러리는 사용하지 않는다.
@@ -43,6 +43,17 @@
 - [x] 자바 코드 컨벤션을 지키면서 프로그래밍한다.
 - [x] 기본적으로 Java Style Guide를 원칙으로 한다.
 
+
+## ✅ 프로그래밍 요구 사항 2
+
+- [x] 인덴트(depth) ≤ 2 유지
+- [x] 3항 연산자 미사용
+- [x] 메서드는 한 가지 일만 수행하도록 분리
+- [x] JUnit 5 + AssertJ로 기능 테스트 검증
+- [x] `camp.nextstep.edu.missionutils.Randoms`의 `pickNumberInRange(0, 9)` 사용
+- [x] `camp.nextstep.edu.missionutils.Console`의 `readLine()` 사용
+- [x] 잘못된 입력 시 `IllegalArgumentException` 발생 및 애플리케이션 종료
+- [x] 프로그램 종료 시 `Console.close()`로 리소스 정리
 ---
 
 ## 🧭 최대한 반영할 목표
